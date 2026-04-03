@@ -1,0 +1,32 @@
+
+{
+    "File": {
+        "Date": "2026/04/01 22:42:22",
+        "Activity": "MIS",
+        "Type": 4
+    },
+    "Parameter_5011": {
+        "Number": "5011",
+        "Length": "8",
+        "Status": "Good",
+        "Time": "2026:092:03:42:19.656",
+        "Type": "2",
+        "Value": "1775101339.469"
+    },
+    "Parameter_5012": {
+        "Number": "5012",
+        "Length": "8",
+        "Status": "Good",
+        "Time": "2026:092:03:42:19.656",
+        "Type": "2",
+        "Value": "1775101339.657"
+    },
+    "Parameter_5013": {
+        "Number": "5013",
+        "Length": "8",
+        "Status": "Good",
+        "Time": "2026:092:03:42:19.656",
+        "Type": "2",
+        "Value": "1459136557.657"
+    }
+}

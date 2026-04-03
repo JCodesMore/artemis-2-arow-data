@@ -1,0 +1,269 @@
+*******************************************************************************
+ Revised: Apr 02, 2026        Artemis II / Spacecraft (Earth)             -1024
+          19:57 UTC       https://www.nasa.gov/mission/artemis-ii/
+                         https://www.nasa.gov/artemis-ii-press-kit/
+
+ BACKGROUND:
+  Four astronauts will fly aboard NASA's Orion spacecraft to confirm the 
+  spacecraft's systems operate as designed in preparation for a sustained 
+  human presence on the Moon. 
+
+  Artemis II astronauts are NASA's Reid Wiseman (Commander), Victor Glover 
+  (pilot), Christina Koch (Mission Specialist), and CSA (Canadian Space 
+  Agency) astronaut Jeremy Hansen (Mission Specialist).
+
+  "Artemis II" refers to a specific mission within the broader Artemis program.
+  "Orion" refers to the spacecraft/capsule the astronauts ride within. The
+    crew has chosen the nickname "Integrity" for the Artemis II Orion capsule.
+  "SLS" refers to the Space Launch System, or rocket launching Orion into space
+
+ MAJOR EVENTS:
+  Launched April 1 @ 22:35:12 UTC from pad LC-39B at the Kennedy Space 
+  Center, USA.  Mission length is 10 days.
+
+  MET column below gives timings of major dynamical events RELATIVE TO LAUNCH.
+  Format is "days/HH:MM:SS" since launch. Given launch time, MET converted to 
+  absolute UTC date/time is also given, format "date HH:MM:{SS}". As the 
+  mission develops, some times may differ somewhat from planning:
+
+  Day 1        MET     Apr  UTC
+    launch   0/00:00    1 22:35:12 - Launch April 1, 22:35:12 UTC
+    launch + 0/00:20    1 22:55    - Orion deploys solar arrays in Earth orbit
+             0/00:49:50 1 23:25:02 - Perigee raise maneuver (2223 x 185 km)
+             0/01:47:57 2 00:23:09 - Apogee raise maneuver  (70377 km)
+             0/03:24:18 2 01:59:30 - Orion/ICPS separation
+             0/04:50    2 03:25    - Orion upper stage separation burn
+             0/05:00    2 03:35    - ICPS disposal burn for Pacific splashdown 
+             0/05:04    2 03:39    - Cubesats deploy at one minute intervals
+             0/12:55    2 11:30    - Perigee raise burn
+  Day 2
+    launch + 1/01:14    2 23:49    - Start Translunar Injection burn (5m 55s)
+             1/01:19    2 23:54    - End TLI (delta-v= 388 m/s)
+             1/01:35    3 00:10    - Earth shadow entrance 
+             1/02:41    3 01:17    - Earth shadow exit
+  Day 3
+    launch + 2/00:08    3 22:43    - Orbit trajectory correction burn #1
+  Day 4
+    launch + 3/01:08    4 23:43    - Orbit trajectory correction burn #2
+  Day 5
+    launch + 4/04:29    6 03:04    - Orbit trajectory correction burn #3
+             4/06:08    6 04:43    - Orion enters lunar sphere of influence
+  Day 6
+    launch + 5/00:31    6 23:06    - Closest approach to the Moon	
+             5/00:34    6 23:09    - Maximum distance from Earth
+  Day 7
+    launch + 5/18:52    7 17:27    - Orion exits lunar sphere of influence
+             6/01:29    8 00:04    - Return trajectory correction burn #1
+  Day 8
+    launch + 7/04:20    9 02:55    - Manual piloting demonstration
+  Day 9
+    launch + 8/04:29   10 03:04    - Return trajectory correction burn #2
+  Day 10
+    launch + 8/20:29   10 19:04    - Return trajectory correction burn #3
+             9/01:09   10 23:44    - Orion crew and service module separation
+             9/01:12   10 23:47    - Crew module raise burn
+             9/01:29   11 00:04    - Entry interface (122 km above Earth)
+                                     Events by altitude:
+                                      11 km : Forward bay cover deploys
+                                      7.6 km: Droque parachute deploys
+                                      2.9 km: Pilot parachutes deploy @ 2.9 km,
+                                              pulling out 3 main parachutes
+             9/01:42   11 00:17    - Splashdown, Pacific Ocean, off Baja Cali.
+             9/01:57   11 00:32    - Orion final power down
+
+ SPACECRAFT DETAILS
+  SLS                
+   * Height                : 98 meters
+   * Mass at liftoff       : 2.61 million kg
+   * Thrust at liftoff     : 39.1 million Newtons
+   * Payload to the moon   : 27,000 kg
+ 
+  Orion module ("Integrity")
+   * Crew + service mod hgt: 7.92 meters
+   * Pressurized volume    : 19.6 m^3 
+   * Mass to the Moon      : ~27,000 kg
+   * Return mass at landing: ~10,400 kg (6500kg srvc mod, 1000kg adpt. discard)
+   * Propellant usage      : ~ 9,000 kg
+  
+ CUBESATS DISPENSED 
+  All are 12U CubeSats from international partners tied to the Artemis Accords.
+  Independent missions and trajectories once released on Day 1.
+
+   1. ATENEA (Argentina space agency, CONAE)
+       Studies: Radiation environment, shielding techniques, communication
+                systems
+       Goal   : Improve future deep-space mission design
+
+   2. TACHELES (Germany, German Aerospace Center (DLR))
+       Focus  : Testing electronics and components
+       Goal   : Validating tech for future lunar vehicles and infrastructure
+
+   3. K-RadCube (South Korea, Korea AeroSpace Administration (KASA))
+       Mission: Measure space radiation using materials that mimic human tissue
+       Goal   : Study biological effects of radiation in space
+
+   4. Space Weather CubeSat-1 (Saudi Arabia, Saudi Space Agency)
+       Studies: Solar radiation, magnetic fields, space weather conditions 
+                in high Earth orbit
+
+ SPACECRAFT TRAJECTORY:
+  Post-launch Orion II trajectory data from NASA/JSC navigation (concatenated):
+  Trajectory data starts after nominal ICPS separation, 3h24m18s after launch, 
+
+  Trajectory name                              Start (TDB)    Stop (TDB)
+  ----------------------------------------- ----------------- -----------------
+  Orion_OEM_20260401_0335.V0.1              2026-Apr-02 01:59 2026-Apr-10 03:27
+  Orion_OEM_20260402_1414.V0.1              2026-Apr-02 03:27 2026-Apr-02 12:45
+  Orion_OEM_20260402_1957.V0.1              2026-Apr-02 12:45 2026-Apr-10 23:53 
+*******************************************************************************
+
+
+*******************************************************************************
+Ephemeris / API_USER Thu Apr  2 17:39:49 2026 Pasadena, USA      / Horizons
+*******************************************************************************
+Target body name: Artemis II (spacecraft) (-1024) {source: Artemis_II_merged}
+Center body name: Earth (399)                     {source: DE441}
+Center-site name: BODY CENTER
+*******************************************************************************
+Start time      : A.D. 2026-Apr-02 23:39:49.0000 TDB
+Stop  time      : A.D. 2026-Apr-03 01:39:49.0000 TDB
+Step-size       : 10 minutes
+*******************************************************************************
+Center geodetic : 0.0, 0.0, 0.0                   {E-lon(deg),Lat(deg),Alt(km)}
+Center cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}
+Center radii    : 6378.137, 6378.137, 6356.752 km {Equator_a, b, pole_c}
+Output units    : KM-S
+Calendar mode   : Mixed Julian/Gregorian
+Output type     : GEOMETRIC cartesian states
+Output format   : 3 (position, velocity, LT, range, range-rate)
+EOP file        : eop.260402.p260629
+EOP coverage    : DATA-BASED 1962-JAN-20 TO 2026-APR-02. PREDICTS-> 2026-JUN-28
+Reference frame : Ecliptic of J2000.0
+*******************************************************************************
+JDTDB
+   X     Y     Z
+   VX    VY    VZ
+   LT    RG    RR
+*******************************************************************************
+$$SOE
+2461133.485983796 = A.D. 2026-Apr-02 23:39:49.0000 TDB 
+ X = 7.403064047017105E+03 Y = 3.185433939139356E+03 Z = 3.139398043038627E+02
+ VX=-6.990451699814955E+00 VY= 6.337100225817160E+00 VZ= 5.011093945138190E-01
+ LT= 2.690332562064237E-02 RG= 8.065414116186750E+03 RR=-3.894038034325320E+00
+2461133.492928241 = A.D. 2026-Apr-02 23:49:49.0000 TDB 
+ X = 2.195877440090183E+03 Y = 6.182203708178224E+03 Z = 5.393428887809719E+02
+ VX=-1.014900792109615E+01 VY= 3.001451333173798E+00 VZ= 1.870562893454983E-01
+ LT= 2.195764325253595E-02 RG= 6.582735842564868E+03 RR=-5.513674828691966E-01
+2461133.499872685 = A.D. 2026-Apr-02 23:59:49.0000 TDB 
+ X =-4.063262719854476E+03 Y = 6.447314526764605E+03 Z = 4.813902879121815E+02
+ VX=-9.928119511557101E+00 VY=-1.807056668390103E+00 VZ=-3.171749288001281E-01
+ LT= 2.547121840433863E-02 RG= 7.636079173691514E+03 RR= 3.737154841033695E+00
+2461133.506817129 = A.D. 2026-Apr-03 00:09:49.0000 TDB 
+ X =-9.355463545843597E+03 Y = 4.633456566485788E+03 Z = 2.331137083125914E+02
+ VX=-7.731669677429640E+00 VY=-3.824083038888755E+00 VZ=-4.647089568529912E-01
+ LT= 3.483277461081090E-02 RG= 1.044260311953499E+04 RR= 5.219608606803048E+00
+2461133.513761574 = A.D. 2026-Apr-03 00:19:49.0000 TDB 
+ X =-1.348090080876741E+04 Y = 2.148702115108013E+03 Z =-5.308119592952448E+01
+ VX=-6.136854980751799E+00 VY=-4.333176434810606E+00 VZ=-4.805132046253078E-01
+ LT= 4.553539957348808E-02 RG= 1.365116936414814E+04 RR= 5.380135002290777E+00
+2461133.520706018 = A.D. 2026-Apr-03 00:29:49.0000 TDB 
+ X =-1.683114623841454E+04 Y =-4.823879650708764E+02 Z =-3.382217398937254E+02
+ VX=-5.101083912478805E+00 VY=-4.400304854727406E+00 VZ=-4.680252535328935E-01
+ LT= 5.617704394634096E-02 RG= 1.684145408784757E+04 RR= 5.233398450379684E+00
+2461133.527650463 = A.D. 2026-Apr-03 00:39:49.0000 TDB 
+ X =-1.966694411770274E+04 Y =-3.106241337140292E+03 Z =-6.136647285588072E+02
+ VX=-4.392644341840344E+00 VY=-4.334480300499765E+00 VZ=-4.498625764301669E-01
+ LT= 6.644660496265627E-02 RG= 1.992019102750972E+04 RR= 5.026553075817624E+00
+2461133.534594907 = A.D. 2026-Apr-03 00:49:49.0000 TDB 
+ X =-2.214100640893651E+04 Y =-5.676065077205852E+03 Z =-8.780775824489615E+02
+ VX=-3.879556802029333E+00 VY=-4.228437270421622E+00 VZ=-4.316890208875854E-01
+ LT= 7.629894247581150E-02 RG= 2.287384750762413E+04 RR= 4.821105568463482E+00
+2461133.541539352 = A.D. 2026-Apr-03 00:59:49.0000 TDB 
+ X =-2.434697387969148E+04 Y =-8.178664896893772E+03 Z =-1.131979141719885E+03
+ VX=-3.490244150678331E+00 VY=-4.113310257364882E+00 VZ=-4.149206998162276E-01
+ LT= 8.575562944991473E-02 RG= 2.570889094012712E+04 RR= 4.632169907183304E+00
+2461133.548483796 = A.D. 2026-Apr-03 01:09:49.0000 TDB 
+ X =-2.634578660447316E+04 Y =-1.061249485772212E+04 Z =-1.376313040493972E+03
+ VX=-3.183878210533781E+00 VY=-4.000256467615069E+00 VZ=-3.997960673749410E-01
+ LT= 9.485308731900775E-02 RG= 2.843624019625396E+04 RR= 4.462077995081462E+00
+2461133.555428241 = A.D. 2026-Apr-03 01:19:49.0000 TDB 
+ X =-2.817921994185938E+04 Y =-1.298019102947751E+04 Z =-1.612043962989501E+03
+ VX=-2.935759084827808E+00 VY=-3.893210171399897E+00 VZ=-3.862169318056299E-01
+ LT= 1.036280349406294E-01 RG= 3.106690331256117E+04 RR= 4.309557667099014E+00
+2461133.562372685 = A.D. 2026-Apr-03 01:29:49.0000 TDB 
+ X =-2.987716326283690E+04 Y =-1.528578145811905E+04 Z =-1.840046211271892E+03
+ VX=-2.730137543322678E+00 VY=-3.793301904640772E+00 VZ=-3.740021247618928E-01
+ LT= 1.121135555913740E-01 RG= 3.361079840585765E+04 RR= 4.172484346551329E+00
+2461133.569317129 = A.D. 2026-Apr-03 01:39:49.0000 TDB 
+ X =-3.146176356126670E+04 Y =-1.753358551008783E+04 Z =-2.061082284422199E+03
+ VX=-2.556513384487474E+00 VY=-3.700541479721285E+00 VZ=-3.629668955350198E-01
+ LT= 1.203384077625679E-01 RG= 3.607654705494651E+04 RR= 4.048732394706011E+00
+$$EOE
+*******************************************************************************
+ 
+TIME
+
+  Barycentric Dynamical Time ("TDB" or T_eph) output was requested. This
+continuous coordinate time is equivalent to the relativistic proper time
+of a clock at rest in a reference frame co-moving with the solar system
+barycenter but outside the system's gravity well. It is the independent
+variable in the solar system relativistic equations of motion.
+
+  TDB runs at a uniform rate of one SI second per second and is independent
+of irregularities in Earth's rotation.
+ 
+CALENDAR SYSTEM
+
+  Mixed calendar mode was active such that calendar dates after AD 1582-Oct-15
+(if any) are in the modern Gregorian system. Dates prior to 1582-Oct-5 (if any)
+are in the Julian calendar system, which is automatically extended for dates
+prior to its adoption on 45-Jan-1 BC.  The Julian calendar is useful for
+matching historical dates. The Gregorian calendar more accurately corresponds
+to the Earth's orbital motion and seasons. A "Gregorian-only" calendar mode is
+available if such physical events are the primary interest.
+
+REFERENCE FRAME AND COORDINATES
+
+  Ecliptic at the standard reference epoch
+
+    Reference epoch: J2000.0
+    X-Y plane: adopted Earth orbital plane at the reference epoch
+               Note: IAU76 obliquity of 84381.448 arcseconds wrt ICRF X-Y plane
+    X-axis   : ICRF
+    Z-axis   : perpendicular to the X-Y plane in the directional (+ or -) sense
+               of Earth's north pole at the reference epoch.
+
+  Symbol meaning:
+
+    JDTDB    Julian Day Number, Barycentric Dynamical Time
+      X      X-component of position vector (km)
+      Y      Y-component of position vector (km)
+      Z      Z-component of position vector (km)
+      VX     X-component of velocity vector (km/sec)                           
+      VY     Y-component of velocity vector (km/sec)                           
+      VZ     Z-component of velocity vector (km/sec)                           
+      LT     One-way down-leg Newtonian light-time (sec)
+      RG     Range; distance from coordinate center (km)
+      RR     Range-rate; radial velocity wrt coord. center (km/sec)
+
+ABERRATIONS AND CORRECTIONS
+
+ Geometric state vectors have NO corrections or aberrations applied.
+
+Computations by ...
+
+    Solar System Dynamics Group, Horizons On-Line Ephemeris System
+    4800 Oak Grove Drive, Jet Propulsion Laboratory
+    Pasadena, CA  91109   USA
+
+    General site: https://ssd.jpl.nasa.gov/
+    Mailing list: https://ssd.jpl.nasa.gov/email_list.html
+    System news : https://ssd.jpl.nasa.gov/horizons/news.html
+    User Guide  : https://ssd.jpl.nasa.gov/horizons/manual.html
+    Connect     : browser        https://ssd.jpl.nasa.gov/horizons/app.html#/x
+                  API            https://ssd-api.jpl.nasa.gov/doc/horizons.html
+                  command-line   telnet ssd.jpl.nasa.gov 6775
+                  e-mail/batch   https://ssd.jpl.nasa.gov/ftp/ssd/horizons_batch.txt
+                  scripts        https://ssd.jpl.nasa.gov/ftp/ssd/SCRIPTS
+    Author      : Jon.D.Giorgini@jpl.nasa.gov
+*******************************************************************************
