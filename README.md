@@ -22,35 +22,37 @@ Real-time telemetry data captured from NASA's AROW (Artemis Real-time Orbit Webs
 
 ### What We Have
 
-| Source       | Files | From (UTC)          | To (UTC)            | Post-Launch Offset     |
-|--------------|-------|---------------------|---------------------|------------------------|
-| AROW GCS     | 503   | 2026-04-01 22:30:32 | 2026-04-02 08:43:34 | T-0h05m to T+10h09m    |
-| JPL Horizons | 1     | 2026-04-02 01:57:37 | 2026-04-10 23:53:25 | T+3h22m to T+9d-01h18m |
+| Source            | Files | From (UTC)          | To (UTC)            | Post-Launch Offset         |
+|-------------------|-------|---------------------|---------------------|----------------------------|
+| AROW GCS Ascent   | 503   | 2026-04-01 22:30:32 | 2026-04-02 08:43:34 | T-0h05m to T+10h09m        |
+| JPL Horizons      | 1     | 2026-04-02 01:57:37 | 2026-04-10 23:53:25 | T+3h22m to T+9d-01h18m     |
+| AROW GCS Re-entry | 9     | 2026-04-10 23:53:08 | 2026-04-11 00:07:02 | T+9d-01h18m to T+9d-01h32m |
 
-**Total: 505 files, ~10 MB**
+**Total: 514 files, ~10 MB**
 
 ### Gaps > 1 minute
 
-| From (UTC)         | To (UTC)            | Gap Duration (s) |
-|--------------------|---------------------|------------------|
-|2026-04-01 23:13:55 | 2026-04-01 23:38:03 | 1448             |
-|2026-04-01 23:38:03 | 2026-04-02 00:24:14 | 2771             |
-|2026-04-02 00:25:15 | 2026-04-02 00:27:16 | 121              |
-|2026-04-02 00:29:18 | 2026-04-02 00:35:18 | 361              |
-|2026-04-02 00:36:19 | 2026-04-02 00:41:22 | 303              |
-|2026-04-02 00:59:26 | 2026-04-02 01:06:32 | 426              |
-|2026-04-02 01:30:56 | 2026-04-02 01:33:00 | 124              |
-|2026-04-02 02:01:28 | 2026-04-02 02:03:30 | 122              |
-|2026-04-02 03:39:21 | 2026-04-02 03:41:20 | 120              |
-|2026-04-02 03:41:20 | 2026-04-02 03:43:20 | 120              |
-|2026-04-02 03:59:22 | 2026-04-02 04:01:22 | 120              |
-|2026-04-02 04:22:22 | 2026-04-02 04:24:23 | 121              |
-|2026-04-02 04:33:23 | 2026-04-02 04:35:23 | 120              |
-|2026-04-02 05:10:29 | 2026-04-02 05:13:32 | 183              |
-|2026-04-02 05:15:33 | 2026-04-02 05:17:35 | 122              |
-|2026-04-02 05:28:46 | 2026-04-02 05:30:48 | 122              |
-|2026-04-02 05:50:06 | 2026-04-02 05:53:24 | 198              |
-|2026-04-02 05:53:24 | 2026-04-02 05:55:25 | 121              |
+| From (UTC)          | To (UTC)            | Gap Duration (s) |
+|---------------------|---------------------|------------------|
+| 2026-04-01 23:13:55 | 2026-04-01 23:38:03 | 1448             |
+| 2026-04-01 23:38:03 | 2026-04-02 00:24:14 | 2771             |
+| 2026-04-02 00:25:15 | 2026-04-02 00:27:16 | 121              |
+| 2026-04-02 00:29:18 | 2026-04-02 00:35:18 | 361              |
+| 2026-04-02 00:36:19 | 2026-04-02 00:41:22 | 303              |
+| 2026-04-02 00:59:26 | 2026-04-02 01:06:32 | 426              |
+| 2026-04-02 01:30:56 | 2026-04-02 01:33:00 | 124              |
+| 2026-04-02 02:01:28 | 2026-04-02 02:03:30 | 122              |
+| 2026-04-02 03:39:21 | 2026-04-02 03:41:20 | 120              |
+| 2026-04-02 03:41:20 | 2026-04-02 03:43:20 | 120              |
+| 2026-04-02 03:59:22 | 2026-04-02 04:01:22 | 120              |
+| 2026-04-02 04:22:22 | 2026-04-02 04:24:23 | 121              |
+| 2026-04-02 04:33:23 | 2026-04-02 04:35:23 | 120              |
+| 2026-04-02 05:10:29 | 2026-04-02 05:13:32 | 183              |
+| 2026-04-02 05:15:33 | 2026-04-02 05:17:35 | 122              |
+| 2026-04-02 05:28:46 | 2026-04-02 05:30:48 | 122              |
+| 2026-04-02 05:50:06 | 2026-04-02 05:53:24 | 198              |
+| 2026-04-02 05:53:24 | 2026-04-02 05:55:25 | 121              |
+| 2026-04-10 23:53:25 | 2026-04-10 23:59:57 | 392              |
 
 ### Visual Timeline (first 12 hours)
 
@@ -62,16 +64,30 @@ HOR:       -------█████████████████
 Estimated:  █*█--------------------
 ```
 
+### Visual Timeline (final 60 minutes)
+
+```
+Minutes to splashdown: 60 45 30 15 0
+                       |  |  |  |  |
+GCS:                   ---------*-█
+HOR:                   ██████████--
+Estimated:             ----------█-
+```
+
 ## Directory Structure
 
 ```
 artemis-2-arow-data/
 ├── README.md
 ├── Artemis2_Trajectory_J2000.csv             # reconstructed full trajectory from launch to Earth re-entry
-├── gcs/                                      # 503 AROW GCS telemetry files (~1min intervals)
+├── arow_launch/                                      # 503 AROW GCS telemetry files for vehicle ascent (~1min intervals)
 │   ├── arow_gcs_20260401T223031Z.txt         # (earliest)
 │   ├── ...
 │   └── arow_gcs_20260402T084333Z.txt         # (latest)
+├── arow_splashdown/                                      # 9 AROW GCS telemetry files for vehicle re-entry (~1min intervals)
+│   ├── arow_gcs_20260410T235307Z.txt         # (earliest)
+│   ├── ...
+│   └── arow_gcs_20260411T000701Z.txt         # (latest)
 └── horizons/                                 # JPL Horizons Artemis II ephemeris data
     └── Artemis_II_OEM_2026_04_03_to_EI.asc   # Upper stage separation (~T+3h22m) to Earth re-entry (T+9d-01h18m)
 ```
@@ -83,12 +99,13 @@ artemis-2-arow-data/
 A derived file (Artemis2_Trajectory_J2000.csv) provides a continuous spacecraft state history by filling gaps in the raw telemetry using physics-based methods.  
 
 **Reconstruction Summary**  
-- All gaps > ~150 seconds filled  
-- 60-second cadence interpolation  
-- 33 synthetic state vectors added  
+- All gaps > ~150 seconds filled (except where Horizons data exists)  
+- 60-second cadence interpolation (except where Horizons data exists)  
+- 33 synthetic state vectors added for launch  
+- 7 synthetic state vectors added for re-entry
 - Original data preserved unchanged  
   
-**Methods Used**
+**Reconstruction/Interpolation Methods**
   1. Coast Phases (Two-Body Propagation)
       For all non-thrust periods: r̈ = −μ/r³ · r (numerical RK4 integration)
   2. Perigee Raise Burn (Impulsive Model)
@@ -107,13 +124,19 @@ A derived file (Artemis2_Trajectory_J2000.csv) provides a continuous spacecraft 
       - Cubic Hermite interpolation between endpoints:
       - Matches position and velocity at both ends
       - Produces smooth trajectory and velocity evolution
+  4. Splashdown Blackout Period
+      - PCHIP (Piecewise Cubic Hermite Interpolating Polynomial) interpolated speed and altitude over the WGS84 ellipsoid
+      - Integrated speed to get along-track distance
+      - Interpolated ground track position by distance traveled
+      - Converted back to J2000 state vectors
 
 **Data Flags**
 Inserted rows are labeled in the Source field:  
-| Value              | Meaning                        |
-|--------------------|--------------------------------|
-| extrapolated_coast | Two-body propagated state      |
-| extrapolated_burn  | Finite-burn interpolated state |
+| Value                            | Meaning                              |
+|----------------------------------|--------------------------------------|
+| extrapolated_coast               | Two-body propagated state            |
+| extrapolated_burn                | Finite-burn interpolated state       |
+| Interpolated Atmospheric Reentry | Altitude & speed based interpolation |
   
 Attitude (q0–q3) is not reconstructed and remains blank for synthetic points.  
   
