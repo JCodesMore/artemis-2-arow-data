@@ -1,6 +1,6 @@
-# Artemis II AROW Telemetry Archive
+# Artemis II Trajectory Archive
 
-Real-time telemetry data captured from NASA's AROW (Artemis Real-time Orbit Website) GCS data stream during the Artemis II mission, plus supplementary JPL Horizons ephemeris snapshots.
+Real-time telemetry data captured from NASA's AROW (Artemis Real-time Orbit Website) GCS data stream during the Artemis II mission, plus supplementary JPL Horizons ephemeris data.
 
 ## Mission Reference
 
@@ -9,83 +9,69 @@ Real-time telemetry data captured from NASA's AROW (Artemis Real-time Orbit Webs
 - **Crew:** Wiseman, Glover, Koch, Hansen
 - **Mission:** ~10-day crewed free-return lunar flyby
 
+| Time (UTC)     | T+       | Event                                                       |
+|----------------|----------|-------------------------------------------------------------|
+| Apr 1 22:35:12 | T+0      | Liftoff                                                     |
+| ~22:37         | ~T+2m    | SRB separation                                              |
+| ~22:43         | ~T+8m    | MECO / Core stage separation (orbit: 185 x 2,253 km)        |
+| ~22:55         | ~T+20m   | Orion solar array deployment                                |
+| ~23:24         | ~T+49m   | ICPS perigee raise burn (orbit: 185 x 2,222 km)             |
+| Apr 2 00:23    | ~T+1h48m | ICPS apogee raise burn (15 min, orbit: ~2,414 x ~70,400 km) |
+
 ## Data Coverage
 
 ### What We Have
 
-| Source | Files | From (UTC) | To (UTC) | Post-Launch Offset |
-|--------|------:|------------|----------|-------------------|
-| Wayback Machine | 13 | 2026-04-01 22:44:33 | 2026-04-03 11:59:56 | T+9m to T+37h25m |
-| AROW GCS | 5,255 | 2026-04-02 00:24:22 | 2026-04-03 22:56:27 | T+1h49m to T+48h21m |
-| JPL Horizons | 8 | 2026-04-02 06:34:38 | 2026-04-03 02:22:34 | T+7h59m to T+27h47m |
+| Source            | Files | From (UTC)          | To (UTC)            | Post-Launch Offset         |
+|-------------------|-------|---------------------|---------------------|----------------------------|
+| AROW GCS Ascent   | 503   | 2026-04-01 22:30:32 | 2026-04-02 08:43:34 | T-0h05m to T+10h09m        |
+| JPL Horizons      | 1     | 2026-04-02 01:57:37 | 2026-04-10 23:53:25 | T+3h22m to T+9d-01h18m     |
+| AROW GCS Re-entry | 9     | 2026-04-10 23:53:08 | 2026-04-11 00:07:02 | T+9d-01h18m to T+9d-01h32m |
 
-**Total: 5,276 files, ~102 MB**
+**Total: 514 files, ~10 MB**
 
-### Wayback Machine Recovery
+### Gaps > 1 minute
 
-The Internet Archive crawled the AROW GCS bucket (`p-2-cen1`) during the launch window, capturing 13 snapshots of the live telemetry file at irregular intervals. Two of these snapshots are from **just 9-10 minutes after launch** -- the earliest known public AROW telemetry for the Artemis II mission.
+| From (UTC)          | To (UTC)            | Gap Duration (s) |
+|---------------------|---------------------|------------------|
+| 2026-04-01 23:13:55 | 2026-04-01 23:38:03 | 1448             |
+| 2026-04-01 23:38:03 | 2026-04-02 00:24:14 | 2771             |
+| 2026-04-02 00:25:15 | 2026-04-02 00:27:16 | 121              |
+| 2026-04-02 00:29:18 | 2026-04-02 00:35:18 | 361              |
+| 2026-04-02 00:36:19 | 2026-04-02 00:41:22 | 303              |
+| 2026-04-02 00:59:26 | 2026-04-02 01:06:32 | 426              |
+| 2026-04-02 01:30:56 | 2026-04-02 01:33:00 | 124              |
+| 2026-04-02 02:01:28 | 2026-04-02 02:03:30 | 122              |
+| 2026-04-02 03:39:21 | 2026-04-02 03:41:20 | 120              |
+| 2026-04-02 03:41:20 | 2026-04-02 03:43:20 | 120              |
+| 2026-04-02 03:59:22 | 2026-04-02 04:01:22 | 120              |
+| 2026-04-02 04:22:22 | 2026-04-02 04:24:23 | 121              |
+| 2026-04-02 04:33:23 | 2026-04-02 04:35:23 | 120              |
+| 2026-04-02 05:10:29 | 2026-04-02 05:13:32 | 183              |
+| 2026-04-02 05:15:33 | 2026-04-02 05:17:35 | 122              |
+| 2026-04-02 05:28:46 | 2026-04-02 05:30:48 | 122              |
+| 2026-04-02 05:50:06 | 2026-04-02 05:53:24 | 198              |
+| 2026-04-02 05:53:24 | 2026-04-02 05:55:25 | 121              |
+| 2026-04-10 23:53:25 | 2026-04-10 23:59:57 | 392              |
 
-| Wayback Capture (UTC) | Telemetry Time (UTC) | MET | Alt (km) | Full State Vector? |
-|------------------------|---------------------|-----|----------|-------------------|
-| Apr 1 22:45:39 | Apr 1 22:44:33 | **T+9m21s** | **205** | **Yes** |
-| Apr 1 22:46:05 | Apr 1 22:45:33 | **T+10m21s** | **246** | **Yes** |
-| Apr 2 00:34:33 | Apr 2 00:34:17 | T+1h59m | 7,146 | No (alt/lat/lon only) |
-| Apr 2 02:30:14 | Apr 2 02:30:14 | T+3h55m | ~115,000 | Yes |
-| Apr 2 11:56:41 | Apr 2 11:56:41 | T+13h21m | -- | Yes |
-| Apr 2 15:04:59 | Apr 2 15:04:59 | T+16h30m | -- | No (timestamps only) |
-| Apr 2 22:45:31 | Apr 2 22:45:31 | T+24h10m | -- | Yes |
-| Apr 3 02:44:26 | Apr 3 02:44:26 | T+28h9m | -- | Yes |
-| Apr 3 06:31:06 | Apr 3 06:31:06 | T+31h56m | -- | Yes |
-| Apr 3 07:03:53 | Apr 3 07:03:53 | T+32h29m | -- | Yes |
-| Apr 3 08:36:51 | Apr 3 08:36:51 | T+34h2m | -- | Yes |
-| Apr 3 10:27:22 | Apr 3 10:27:22 | T+35h52m | -- | Yes |
-| Apr 3 11:59:56 | Apr 3 11:59:56 | T+37h25m | -- | Yes |
-
-The first two snapshots confirm Orion was in its initial parking orbit (185 x 2,253 km) at ~8.2 km/s, consistent with the post-MECO insertion orbit.
-
-### Remaining Gap
-
-```
-LAUNCH    WAYBACK     WAYBACK        WAYBACK (alt only)    GCS ARCHIVE
-  |       #1  #2           |              |                     |
-  v       v   v            |              v                     v
-  T+0 ··· T+9 T+10 ======= T+1h49m ····· T+1h59m ············ T+1h49m
-  22:35   22:44 22:45      00:24          00:34                00:24
-
-  ^^^^^^^^                  ^^^^^^^^^^^^^^^^
-  T+0 to T+9m (no data)    T+10m to T+1h49m (no data)
-```
-
-**Gap 1 (T+0 to T+9m):** Ascent phase through MECO. No public telemetry exists for this period.
-
-**Gap 2 (T+10m to T+1h49m):** Parking orbit coast through PRM and ARB burns. The T+1h59m Wayback snapshot (altitude only) provides one calibration point within this gap, but no continuous data exists.
-
-**Events within the gaps:**
-
-| Time (UTC) | T+ | Event |
-|------------|-----|-------|
-| Apr 1 22:35:12 | T+0 | Liftoff |
-| ~22:37 | ~T+2m | SRB separation |
-| ~22:43 | ~T+8m | MECO / Core stage separation (orbit: 185 x 2,253 km) |
-| **22:44:33** | **T+9m** | **Wayback snapshot #1 (205 km alt, full state vector)** |
-| **22:45:33** | **T+10m** | **Wayback snapshot #2 (246 km alt, full state vector)** |
-| ~22:55 | ~T+20m | Orion solar array deployment |
-| ~23:24 | ~T+49m | ICPS perigee raise burn (orbit: 185 x 2,222 km) |
-| ~23:26 | ~T+51m | Brief comms dropout (NSN handover) |
-| Apr 2 00:23 | ~T+1h48m | ICPS apogee raise burn (15 min, orbit: ~2,414 x ~70,400 km) |
-| **00:24:22** | **T+1h49m** | **Continuous GCS archive begins** |
-| **00:34:17** | **T+1h59m** | **Wayback snapshot #3 (7,146 km alt, partial params)** |
-
-### Visual Timeline (first 50 hours)
+### Visual Timeline (first 12 hours)
 
 ```
-Hour:  0    3    6    9   12   15   18   21   24   27   30   33   36   39   42   45   48
-       |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
-WBK:   **·-·····*··········*··········*·········***·*··········*··········*
-GCS:   --████████████████████████████████████████████████████████████████████████████████
-HOR:   ---------████████████████████████---
-       ^^
-       GAP
+Hour:      0     3     6     9    12
+           |     |     |     |     |
+GCS:       █-*-█████████████-------
+HOR:       -------█████████████████
+Estimated:  █*█--------------------
+```
+
+### Visual Timeline (final 60 minutes)
+
+```
+Minutes to splashdown: 60 45 30 15 0
+                       |  |  |  |  |
+GCS:                   ---------*-█
+HOR:                   ██████████--
+Estimated:             ----------█-
 ```
 
 ## Directory Structure
@@ -93,27 +79,78 @@ HOR:   ---------█████████████████████�
 ```
 artemis-2-arow-data/
 ├── README.md
-├── gcs/                          # 5,255 AROW GCS telemetry files (~7s intervals)
-│   ├── arow_gcs_20260402T002422Z.txt   (earliest)
+├── Artemis2_Trajectory_J2000.csv             # reconstructed full trajectory from launch to Earth re-entry
+├── arow_launch/                                      # 503 AROW GCS telemetry files for vehicle ascent (~1min intervals)
+│   ├── arow_gcs_20260401T223031Z.txt         # (earliest)
 │   ├── ...
-│   └── arow_gcs_20260403T225627Z.txt   (latest)
-├── wayback/                      # 13 Wayback Machine GCS snapshots
-│   ├── arow_gcs_20260401T224433Z_wayback.json   (T+9m, earliest known)
-│   ├── arow_gcs_20260401T224533Z_wayback.json   (T+10m)
-│   ├── arow_gcs_20260402T003417Z_wayback.json   (T+1h59m, alt only)
+│   └── arow_gcs_20260402T084333Z.txt         # (latest)
+├── arow_splashdown/                                      # 9 AROW GCS telemetry files for vehicle re-entry (~1min intervals)
+│   ├── arow_gcs_20260410T235307Z.txt         # (earliest)
 │   ├── ...
-│   └── arow_gcs_20260403T115956Z_wayback.json   (T+37h25m)
-└── horizons/                     # 8 JPL Horizons ephemeris snapshots
-    ├── horizons_20260402T063438Z.txt   (earliest)
-    ├── ...
-    └── horizons_20260403T022234Z.txt   (latest)
+│   └── arow_gcs_20260411T000701Z.txt         # (latest)
+└── horizons/                                 # JPL Horizons Artemis II ephemeris data
+    └── Artemis_II_OEM_2026_04_03_to_EI.asc   # Upper stage separation (~T+3h22m) to Earth re-entry (T+9d-01h18m)
 ```
 
 ## Data Format
 
+### Reconstructed Continuous Dataset
+
+A derived file (Artemis2_Trajectory_J2000.csv) provides a continuous spacecraft state history by filling gaps in the raw telemetry using physics-based methods.  
+
+**Reconstruction Summary**  
+- All gaps > ~150 seconds filled (except where Horizons data exists)  
+- 60-second cadence interpolation (except where Horizons data exists)  
+- 33 synthetic state vectors added for launch  
+- 7 synthetic state vectors added for re-entry
+- Original data preserved unchanged  
+  
+**Reconstruction/Interpolation Methods**
+  1. Coast Phases (Two-Body Propagation)
+      For all non-thrust periods: r̈ = −μ/r³ · r (numerical RK4 integration)
+  2. Perigee Raise Burn (Impulsive Model)
+      The perigee raise burn at 2026-04-01 23:24:00 UTC is modeled as an instantaneous impulse with estimated Δv ≈ 44.67 m/s.  
+  3. Apogee Raise Burn (Finite Burn Model)
+  
+      The interval:
+
+      - Start: 2026-04-02 00:23:00 UTC
+      - End: 2026-04-02 00:38:00 UTC  
+        
+      is modeled as a finite-duration burn, not a ballistic coast.  
+  
+      Method:  
+      - Boundary conditions derived from observed pre- and post-burn states
+      - Cubic Hermite interpolation between endpoints:
+      - Matches position and velocity at both ends
+      - Produces smooth trajectory and velocity evolution
+  4. Splashdown Blackout Period
+      - PCHIP (Piecewise Cubic Hermite Interpolating Polynomial) interpolated speed and altitude over the WGS84 ellipsoid
+      - Integrated speed to get along-track distance
+      - Interpolated ground track position by distance traveled
+      - Converted back to J2000 state vectors
+
+**Data Flags**
+Inserted rows are labeled in the Source field:  
+| Value                            | Meaning                              |
+|----------------------------------|--------------------------------------|
+| extrapolated_coast               | Two-body propagated state            |
+| extrapolated_burn                | Finite-burn interpolated state       |
+| Interpolated Atmospheric Reentry | Altitude & speed based interpolation |
+  
+Attitude (q0–q3) is not reconstructed and remains blank for synthetic points.  
+  
+**Accuracy Notes**
+- Coast segments are accurate to <~100–200 m over short gaps
+- Burn segment is a physically consistent interpolation, not a thrust-resolved solution
+- Long-term propagation does not include perturbations:
+  - J2 oblateness
+  - Third-body gravity (Moon/Sun)
+  - Drag (negligible after LEO)
+
 ### AROW GCS Files (`gcs/`)
 
-JSON files polled from NASA's AROW GCS (Google Cloud Storage) data stream at ~7-second intervals. Each file is a snapshot of Orion's telemetry at a single point in time.
+JSON files polled from NASA's AROW GCS (Google Cloud Storage) data stream. Each file is a snapshot of Orion's telemetry at a single point in time.  
 
 **Filename format:** `arow_gcs_YYYYMMDDTHHMMSSZ.txt` (UTC timestamp of when the data was fetched)
 
@@ -165,27 +202,17 @@ JSON files polled from NASA's AROW GCS (Google Cloud Storage) data stream at ~7-
 
 **Unit conversions:** Multiply feet by `0.3048` for meters. Multiply ft/s by `0.3048` for m/s.
 
-Each file contains 105+ parameters including additional health/status telemetry beyond the state vector.
+Each file contains 105+ parameters including additional health/status telemetry beyond the state vector.  
 
-### Wayback Machine Files (`wayback/`)
+### Horizons Data (`horizons/`)
 
-GCS telemetry snapshots recovered from the Internet Archive's Wayback Machine. These are captures of the same `October/1/October_105_1.txt` file in the `p-2-cen1` GCS bucket, taken at irregular intervals by the Archive's web crawlers during the mission.
-
-**Filename format:** `arow_gcs_YYYYMMDDTHHMMSSZ_wayback.json` (timestamp from the telemetry data's `Time` field)
-
-The data format is identical to the `gcs/` files -- same JSON structure, same parameter numbering. Some snapshots contain the full 80+ parameter set (including XYZ position/velocity), while others captured a reduced parameter set (altitude/lat/lon or timestamps only). The two earliest snapshots (T+9m and T+10m) contain complete state vectors.
-
-### Horizons Files (`horizons/`)
-
-Ephemeris snapshots from JPL's Horizons API for object `-1024` (Artemis II Orion). These provide independent position/velocity data in km and km/s (J2000 frame).
+Ephemeris data from JPL's Horizons API for object `-1024` (Artemis II Orion). This provides independent position/velocity data in km and km/s (J2000 frame).  
 
 ## How This Data Was Collected
 
-**GCS archive:** A Python poller running locally fetched the AROW GCS data stream every ~7 seconds and archived each raw JSON response. The poller was started approximately 1 hour 49 minutes after launch, which is why the continuous archive begins at T+1h49m.
+**GCS archive:** A Python poller running locally fetched the AROW GCS data stream every ~7 seconds and archived each raw JSON response. Duplicate files were deleted, resulting in ~1 min intervals.  
 
-**Wayback Machine recovery:** The Internet Archive's web crawlers independently captured the GCS telemetry file 13 times between April 1-3, 2026. These snapshots were discovered and recovered on April 3, 2026 by querying the Wayback Machine's CDX API for archived versions of the GCS bucket URL. Each snapshot captured the telemetry file at a single moment in time with a unique GCS `generation` ID, confirming they represent distinct data points.
-
-**JPL Horizons:** Fetched periodically as a backup/cross-reference source via the public API.
+**JPL Horizons:** Downloaded from NASA.gov (https://www.nasa.gov/wp-content/uploads/2026/03/artemis-ii-oem-2026-04-04-to-ei.zip?emrc=69d1829f7a009).
 
 ## Usage
 
